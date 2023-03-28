@@ -1,12 +1,17 @@
 import React from "react";
 import './App.css';
-import Weather from "./Weather";
+import SearchEngine from "./SearchEngine";
 
 function App() {
   return (
-    <div>
-    <h1>Hello World!</h1>
-    <Weather city = "Kyiv"/>
+    <div className="App">
+      <h1>Weather App</h1>
+      <SearchEngine />
+      <div className="Info-end">
+        <p>
+          <a href=Created Liudmyla Leroy(LiukyUKR) with React <span role="img">⚛️</span>
+        </p>
+      </div>
     </div>
   );
 }
