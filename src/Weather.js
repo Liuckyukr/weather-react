@@ -37,27 +37,27 @@ export default function Weather() {
         <div className="row Weather-day">
           <div className="col">
             <div className="Time-day">08:00</div>
-            <div className="Descript-img-day">😎</div>
+            <div role="img" className="Descript-img-day">😎</div>
             <div className="Temperature-day">15°C</div>
           </div>
           <div className="col">
             <div className="Time-day">12:00</div>
-            <div className="Descript-img-day">😎</div>
+            <div role="img" className="Descript-img-day">😎</div>
             <div className="Temperature-day">25°C</div>
           </div>
           <div className="col">
             <div className="Time-day">16:00</div>
-            <div className="Descript-img-day">😎</div>
+            <div role="img" className="Descript-img-day">😎</div>
             <div className="Temperature-day">26°C</div>
           </div>
           <div className="col">
             <div className="Time-day">20:00</div>
-            <div className="Descript-img-day">😎</div>
+            <div role="img" className="Descript-img-day">😎</div>
             <div className="Temperature-day">20°C</div>
           </div>
           <div className="col">
             <div className="Time-day">00:00</div>
-            <div className="Descript-img-day">🌑</div>
+            <div role="img" className="Descript-img-day">🌑</div>
             <div className="Temperature-day">16°C</div>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function Weather() {
         <div className="Weather-forecast">
           <div className="row">
             <div className="col-3 W-forecast">
-              <img src="" className="Icon" width="" />
+              <img src="" className="Icon" alt="WeatherIcon" width="" />
               😎
             </div>
             <div className="col-3 W-forecast">
@@ -81,7 +81,7 @@ export default function Weather() {
           </div>
           <div className="row">
             <div className="col-3 W-forecast">
-              <img src="" class="Icon" width="" />
+              <img src="" class="Icon" alt="WeatherIcon" width="" />
               😎
             </div>
             <div className="col-3 W-forecast">
@@ -97,7 +97,7 @@ export default function Weather() {
           </div>
           <div className="row">
             <div className="col-3 W-forecast">
-              <img src="" class="Icon" width="" />
+              <img src="" class="Icon" alt="WeatherIcon" width="" />
               😎
             </div>
             <div className="col-3 W-forecast">
@@ -113,7 +113,7 @@ export default function Weather() {
           </div>
           <div className="row">
             <div className="col-3 W-forecast">
-              <img src="" class="Icon" width="" />
+              <img src="" class="Icon" alt="WeatherIcon" width="" />
               😎
             </div>
             <div className="col-3 W-forecast">
@@ -129,7 +129,7 @@ export default function Weather() {
           </div>
           <div className="row">
             <div className="col-3 W-forecast">
-              <img src="" class="Icon" width="" />
+              <img src="" class="Icon" alt="WeatherIcon" width="" />
               😎
             </div>
             <div className="col-3 W-forecast">
