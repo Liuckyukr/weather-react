@@ -3,7 +3,7 @@ import Weather from "./Weather";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function SearchEngine() {
-  const [city, setCity] = useState("Kyiv");
+  const [city, setCity] = useState(null);
   const [searchedCity, setSearchedCity] = useState(null);
 
   function handleSumbit(event) {
