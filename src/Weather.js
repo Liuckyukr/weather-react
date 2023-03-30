@@ -12,7 +12,7 @@ export default function Weather() {
       wind: "2 m/s"
     };
     return (
-      <div className="Container">
+      <div className="container">
         <div className="City-info">
           
           <div className="InfoCity">
