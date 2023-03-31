@@ -1,36 +1,51 @@
-import React from "react";
-//import axios from "axios";
-//import { Dna } from "react-loader-spinner";
+import React, { useState } from "react";
+import axios from "axios";
+import { Dna } from "react-loader-spinner";
 
-export default function Weather() {
-    let weatherData = {
-      city: "Kyiv",
-      date: "20 may 2023",
-      temperature: "😎26°C",
-      description: "Sunny",
-      humidity: "60%",
-      wind: "2 m/s"
-    };
+export default function Weather(props) {
+  const [temperature, setTemperature] = useState("");
+  const [description, setDescription] = useState(null);
+  const [humidity, setHumidity] = useState(null);
+  const [wind, setWind] = useState(null);
+  const [icon, setIcon] = useState(null);
+    
+  function showTemperature (response) {
+    setTemperature(response.data.temperature.current);
+    setDescription(response.data.condition.description);
+    setHumidity(response.data.temperature.humidity);
+    setWind(response.data.wind.speed);
+    setIcon(
+      <img
+        src={response.data.condition.icon_url}
+        alt={response.data.condition.icon}
+        className="weather-icon"
+      />
+    );
+  }
+
+    if (temperature) {
     return (
       <div className="container">
         <div className="City-info">
           
           <div className="InfoCity">
             <div className="NameCity">
-              <div className="City">{weatherData.city}</div>
+              <div className="City">{props.city}</div>
             </div>
-            <div>{weatherData.date}</div>
+            <div>20 may 2023</div>
           </div>
         </div>
   
         <div className="row Weather-now">
           <div className="col-6">
-            <p>{weatherData.temperature}</p>
+            <p>
+            <span>{icon}</span>
+            {Math.round(temperature)} °C</p>
           </div>
           <div className="col-6">
-            <div>Description: {weatherData.description}</div>
-            <div>Humidity: {weatherData.humidity}</div>
-            <div>Wind: {weatherData.wind}</div>
+            <div>Description: {description}</div>
+            <div>Humidity: {humidity} %</div>
+            <div>Wind: {Math.round(wind)} m/s</div>
           </div>
         </div>
   
@@ -146,25 +161,24 @@ export default function Weather() {
         </div>
       </div>
     );
+   } else {
+   if (!props.city) return;
+   let apiKey = "e2ca61fe673t0d6bod3bada8d40a7305";
+   let url = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}&units=metric`;
+   axios.get(url).then(showTemperature);
+   return (
+   <div>
+         <Dna 
+         visible={true}
+         height={80}
+         width={80}
+         ariaLabel="dna-loading"
+         wrapperStyle={{}}
+         wrapperClass="dna-wrapper"
+         />
+   </div>
+   );
   }
-   // } else {
-    //  if (!props.city) return;
-    //  let apiKey = "e2ca61fe673t0d6bod3bada8d40a7305";
-    //  let url = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}&units=metric`;
-    //  axios.get(url).then(showTemperature);
-    //  return (
-    //  <div>
-     //       <Dna 
-    //        visible={true}
-    //        height={80}
-    //        width={80}
-    //        ariaLabel="dna-loading"
-    //        wrapperStyle={{}}
-    //        wrapperClass="dna-wrapper"
-      //      />
-    // </div>
-     // );
-   // }
- // }
+}
   
 
