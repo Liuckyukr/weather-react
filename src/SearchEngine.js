@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 export default function SearchEngine() {
   const [city, setCity] = useState(null);
-  const [searchedCity, setSearchedCity] = useState(null);
+  const [searchedCity, setSearchedCity] = useState("Kyiv");
 
   function handleSumbit(event) {
     event.preventDefault();
@@ -17,11 +17,12 @@ export default function SearchEngine() {
 
   return (
     <div className="City-info">
-    <form onSubmit={handleSumbit}>
-      <input type="search" placeholder="Enter the city" className="chooseCity" onChange={updateCity} />
-      <input type="submit" value="Search" className="submit" />
+      <form onSubmit={handleSumbit}>
+        <input type="search" placeholder="Enter the city" className="chooseCity" onChange={updateCity} />
+        <input type="submit" value="Search" className="submit" />
+      
+      </form>
       <Weather city={searchedCity} />
-    </form>
     </div>
   );
 }

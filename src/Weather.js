@@ -3,13 +3,17 @@ import axios from "axios";
 import { Dna } from "react-loader-spinner";
 
 export default function Weather(props) {
+  const [ready, setReady] = useState(false);
   const [temperature, setTemperature] = useState("");
   const [description, setDescription] = useState(null);
   const [humidity, setHumidity] = useState(null);
   const [wind, setWind] = useState(null);
   const [icon, setIcon] = useState(null);
+  
+
     
-  function showTemperature (response) {
+  function showWeather (response) {
+    setReady(true);
     setTemperature(response.data.temperature.current);
     setDescription(response.data.condition.description);
     setHumidity(response.data.temperature.humidity);
@@ -23,7 +27,7 @@ export default function Weather(props) {
     );
   }
 
-    if (temperature) {
+    if (ready) {
     return (
       <div className="container">
         <div className="City-info">
@@ -43,7 +47,7 @@ export default function Weather(props) {
             {Math.round(temperature)} °C</p>
           </div>
           <div className="col-6">
-            <div>Description: {description}</div>
+            <div className="text-capitalize">Description: {description}</div>
             <div>Humidity: {humidity} %</div>
             <div>Wind: {Math.round(wind)} m/s</div>
           </div>
@@ -162,10 +166,10 @@ export default function Weather(props) {
       </div>
     );
    } else {
-   if (!props.city) return;
+   
    let apiKey = "e2ca61fe673t0d6bod3bada8d40a7305";
    let url = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}&units=metric`;
-   axios.get(url).then(showTemperature);
+   axios.get(url).then(showWeather);
    return (
    <div>
          <Dna 
