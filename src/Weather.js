@@ -3,6 +3,7 @@ import axios from "axios";
 import { Dna } from "react-loader-spinner";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false});
@@ -11,7 +12,9 @@ export default function Weather(props) {
   function handleResponse (response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       city: response.data.city,
+      country: response.data.country,
       date: new Date(response.data.time*1000),
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
@@ -78,89 +81,8 @@ export default function Weather(props) {
             <div className="Temperature-day">16°C</div>
           </div>
         </div>
-  
-        <div className="Weather-forecast">
-          <div className="row">
-            <div className="col-3 W-forecast">
-              <img src="" className="Icon" alt="WeatherIcon" width="" />
-              😎
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="TempMin">14°C/</span>
-              <span className="TempMax">25°C</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Day">Fri</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Feels">20°C</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-3 W-forecast">
-              <img src="" class="Icon" alt="WeatherIcon" width="" />
-              😎
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="TempMin">14°C/</span>
-              <span className="TempMax">25°C</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Day">Fri</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Feels">20°C</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-3 W-forecast">
-              <img src="" class="Icon" alt="WeatherIcon" width="" />
-              😎
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="TempMin">14°C/</span>
-              <span className="TempMax">25°C</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Day">Fri</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Feels">20°C</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-3 W-forecast">
-              <img src="" class="Icon" alt="WeatherIcon" width="" />
-              😎
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="TempMin">14°C/</span>
-              <span className="TempMax">25°C</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Day">Fri</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Feels">20°C</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-3 W-forecast">
-              <img src="" class="Icon" alt="WeatherIcon" width="" />
-              😎
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="TempMin">14°C/</span>
-              <span className="TempMax">25°C</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="day">Fri</span>
-            </div>
-            <div className="col-3 W-forecast">
-              <span className="Feels">20°C</span>
-            </div>
-          </div>
-        </div>
+
+        <WeatherForecast coordinates={weatherData.coordinates}/>
       </div>
     );
    } else {

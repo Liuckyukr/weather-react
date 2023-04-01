@@ -6,14 +6,9 @@ export default function WeatherInfo (props) {
     return (
         <div className="WeatherInfo">
             <div className="City-info">
-          
-          <div className="InfoCity">
-            <div className="NameCity">
-              <div className="City">{props.data.city}</div>
-            </div>
-            <div><FormatteDate date={props.data.date} /></div>
+              <div className="City">{props.data.city}, {props.data.country}</div>
+              <div><FormatteDate date={props.data.date} /></div>
           </div>
-        </div>
   
         <div className="row Weather-now">
           <div className="col-6">
