@@ -2,10 +2,11 @@
     margin-top: 40px;
     margin-bottom: 20px;
     margin-left: 10%;
-    margin-right: 6%;
+    margin-right: 10%;
     background-color: #3c444d;
     padding-top: 20px;
     border-radius: 6px;
+    max-width: 80%;
 }
 
 

@@ -3,8 +3,9 @@
     padding: 20px 8px;
     background-color: #3c444d;
     border-radius: 6px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+    
   }
   .Weather-now p {
     font-size: calc(50px + 2vmin);
