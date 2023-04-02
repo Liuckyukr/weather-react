@@ -1,34 +1,29 @@
-.Container {
-    margin-top: 10px;
-    margin-bottom: 80px;
-    font-size: 20px;
-   
-  }
-  .City-info {
-    text-align: center;
-  }
-  .City {
-    font-size: 60px;
-  }
+form {
+  margin-top: 20px;
+}
+
+.chooseCity {
+  border-radius: 6px;
+  margin-right: 2px;
+  width: 30%;
+  min-width:180px;
+}
+
+.submit {
+  border-radius: 6px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 4px;
+  background-color: #404a55;
+  border-color: #404a55;
+  color: white;
+}
   
-  .Weather-now {
-    text-align: start;
-    padding: 20px 8px;
-    background-color: #3f4857;
-  }
-  .Weather-now p {
-    font-size: 40px;
-  }
+  
   
   .Weather-day {
     text-align: center;
     margin-bottom: 40px;
   }
-  .W-forecast {
-    margin-bottom: 6px;
-  }
   
-  .Weather-forecast {
-    text-align: center;
-  }
   

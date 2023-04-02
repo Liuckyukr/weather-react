@@ -4,6 +4,7 @@ import { Dna } from "react-loader-spinner";
 import "bootstrap/dist/css/bootstrap.css";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false});
@@ -46,39 +47,42 @@ export default function Weather(props) {
 
     if (weatherData.ready) {
     return (
-      <div className="container">
-        
-      <form onSubmit={handleSumbit}>
-        <input type="search" placeholder="Enter the city" className="chooseCity" onChange={handleCityChange} />
-        <input type="submit" value="Search" className="submit" />
-      </form>
-      <WeatherInfo data={weatherData} />
-  
-        <div className="row Weather-day">
-          <div className="col">
-            <div className="Time-day">08:00</div>
-            <div role="img" className="Descript-img-day">😎</div>
-            <div className="Temperature-day">15°C</div>
-          </div>
-          <div className="col">
-            <div className="Time-day">12:00</div>
-            <div role="img" className="Descript-img-day">😎</div>
-            <div className="Temperature-day">25°C</div>
-          </div>
-          <div className="col">
-            <div className="Time-day">16:00</div>
-            <div role="img" className="Descript-img-day">😎</div>
-            <div className="Temperature-day">26°C</div>
-          </div>
-          <div className="col">
-            <div className="Time-day">20:00</div>
-            <div role="img" className="Descript-img-day">😎</div>
-            <div className="Temperature-day">20°C</div>
-          </div>
-          <div className="col">
-            <div className="Time-day">00:00</div>
-            <div role="img" className="Descript-img-day">🌑</div>
-            <div className="Temperature-day">16°C</div>
+      <div> 
+        <form onSubmit={handleSumbit}> 
+            <input type="search" placeholder="Enter the city" className="chooseCity" onChange={handleCityChange} />
+            <input type="submit" value="Search" className="submit" /> 
+        </form>
+
+        <WeatherInfo data={weatherData} />
+
+        <div className="container">
+    
+          <div className="row Weather-day">
+              <div className="col">
+                <div className="Time-day">08:00</div>
+                <div role="img" className="Descript-img-day">😎</div>
+                <div className="Temperature-day">15°C</div>
+              </div>
+              <div className="col">
+                <div className="Time-day">12:00</div>
+                <div role="img" className="Descript-img-day">😎</div>
+                <div className="Temperature-day">25°C</div>
+              </div>
+              <div className="col">
+                <div className="Time-day">16:00</div>
+                <div role="img" className="Descript-img-day">😎</div>
+                <div className="Temperature-day">26°C</div>
+              </div>
+              <div className="col">
+                <div className="Time-day">20:00</div>
+                <div role="img" className="Descript-img-day">😎</div>
+                <div className="Temperature-day">20°C</div>
+              </div>
+              <div className="col">
+                <div className="Time-day">00:00</div>
+                <div role="img" className="Descript-img-day">🌑</div>
+                <div className="Temperature-day">16°C</div>
+              </div>
           </div>
         </div>
 

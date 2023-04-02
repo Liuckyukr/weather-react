@@ -1,3 +1,11 @@
 .Icon-forecast {
     margin-top: -12px;
 }
+
+.TempMin {
+    color: rgb(135, 110, 204);
+}
+
+.W-forecast {
+    margin-bottom: 6px;
+}

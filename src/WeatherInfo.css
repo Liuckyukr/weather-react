@@ -1,0 +1,20 @@
+.Weather-now {
+    text-align: start;
+    padding: 20px 8px;
+    background-color: #3c444d;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Weather-now p {
+    font-size: calc(50px + 2vmin);
+    line-height: 1;
+  }
+
+.City {
+    font-size: calc(30px + 2vmin);
+}
+
+.Format-date {
+    font-size: calc(14px + 2vmin);
+}
