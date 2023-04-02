@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherForecastDay.css";
 
 export default function WeatherForecastDay (props) {
     
@@ -30,7 +31,7 @@ export default function WeatherForecastDay (props) {
             <img
             src={props.data.condition.icon_url}
             alt={props.data.condition.icon} 
-            className="Icon" width="" />
+            className="Icon-forecast" width="60px" />
         </div>
         <div className="col-3 W-forecast">
             <span className="TempMin">{minTemperature()} / </span>
