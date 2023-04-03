@@ -1,6 +1,6 @@
 .Weather-now {
     text-align: start;
-    padding: 20px 8px;
+    padding: 20px 0px;
     background-color: #3c444d;
     border-radius: 6px;
     max-width: 80%;
@@ -31,6 +31,5 @@
     }
     .Weather-now {
         text-align: start;
-        padding: 20px 0px;
       }
 }
