@@ -43,7 +43,7 @@ export default function WeatherForecastDay (props) {
         <div className="col-2 W-forecast">
             <span className="Humidity">{props.data.temperature.humidity}%</span>
         </div>
-        <div className="col-2 W-forecast">
+        <div className="col-3 W-forecast">
             <span className="Wind">{Wind()} </span>
         </div>
     </div>

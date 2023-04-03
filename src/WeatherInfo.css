@@ -14,6 +14,7 @@
 
 .City {
     font-size: calc(30px + 2vmin);
+    color: rgb(214, 160, 23);
 }
 
 .Format-date {
