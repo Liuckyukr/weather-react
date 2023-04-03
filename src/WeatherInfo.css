@@ -4,9 +4,9 @@
     background-color: #3c444d;
     border-radius: 6px;
     max-width: 80%;
-    margin: 20px auto;
-    
+    margin: 20px auto;  
   }
+
   .Weather-now p {
     font-size: calc(50px + 2vmin);
     line-height: 1;
@@ -19,4 +19,18 @@
 
 .Format-date {
     font-size: calc(14px + 2vmin);
+}
+
+@media (max-width:576px) {
+    .Weather-now p {
+        font-size: calc(36px + 2vmin);
+        line-height: 1;
+    }
+    .weather-info-new {
+        font-size: calc(6px + 2vmin);
+    }
+    .Weather-now {
+        text-align: start;
+        padding: 20px 0px;
+      }
 }

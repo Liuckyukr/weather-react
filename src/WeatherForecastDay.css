@@ -9,3 +9,10 @@
 .W-forecast {
     margin-bottom: 6px;
 }
+
+@media (max-width:576px) {
+    .Icon-forecast {
+        margin-top: -10px;
+        width: 46px;
+    }
+}

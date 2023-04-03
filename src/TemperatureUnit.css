@@ -4,3 +4,12 @@
     line-height: 1;
     top: -30px;
 }
+
+@media (max-width:576px) {
+    .unit {
+        font-size: calc(2px + 2vmin);
+        position: relative;
+        line-height: 1;
+        top: -24px;
+    }
+}

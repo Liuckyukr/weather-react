@@ -21,11 +21,20 @@ form {
   color: white;
 }
   
+.weather-icon {
+  width: calc(90px + 2vmin);
+  margin-top: calc(-24px + 2vmin);
+}  
   
-  
-  .Weather-day {
-    text-align: center;
-    margin-bottom: 40px;
+@media (max-width:576px) {
+  .chooseCity {
+    width: 50%;
   }
+  .weather-icon {
+    width: calc(54px + 2vmin);
+    margin-top: calc(-20px + 2vmin);
+  }  
+}
+  
   
   

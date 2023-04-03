@@ -10,7 +10,7 @@ function App() {
       <Weather defaultCity="Kyiv"/>
       <footer className="Info-end">
         <p>
-          <a href="https://weather-react-from-ll.netlify.app/" target="_blank" rel="noreferrer">Created</a> Liudmyla Leroy <a href="https://github.com/Liuckyukr" target="_blank" rel="noreferrer">(LiuckyUKR)</a> with React <span role="img">⚛️</span>
+          <a href="https://weather-react-from-ll.netlify.app/" target="_blank" rel="noreferrer">Created</a> Liudmyla Leroy <a href="https://github.com/Liuckyukr/weather-react" target="_blank" rel="noreferrer">(LiuckyUKR)</a> with React <span role="img">⚛️</span>
         </p>
       </footer> 
     </div>
