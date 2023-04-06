@@ -9,6 +9,14 @@
     max-width: 80%;
 }
 
+@media (max-width:576px) {
+    .Weather-forecast {
+        max-width: 100%;  
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
 
   
   

@@ -31,8 +31,7 @@ form {
     width: 50%;
   }
   .weather-icon {
-    width: calc(54px + 2vmin);
-    margin-top: calc(-20px + 2vmin);
+    width: calc(100px + 2vmin);
   }  
 }
   

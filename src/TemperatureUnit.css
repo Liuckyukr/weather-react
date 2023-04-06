@@ -7,9 +7,9 @@
 
 @media (max-width:576px) {
     .unit {
-        font-size: calc(2px + 2vmin);
+        font-size: calc(14px + 2vmin);
         position: relative;
         line-height: 1;
-        top: -24px;
+        top: -14px; 
     }
 }

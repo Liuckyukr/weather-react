@@ -13,6 +13,9 @@
 @media (max-width:576px) {
     .Icon-forecast {
         margin-top: -10px;
-        width: 46px;
+        width: 50px;
+    }
+    .W-forecast {
+        font-size: calc(11px + 2vmin);
     }
 }
